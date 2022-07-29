@@ -1,0 +1,168 @@
+:root{
+    --font1:'Fredoka One';
+    --font2:Arial, Helvetica, sans-serif;
+    --color1:white;
+    --color2:black;
+    --color3:rgb(128, 121, 121);
+    --color4:rgb(226, 83, 17);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px 60px 120px;
+}
+.nav-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color3);
+    
+}
+.nav-items h5{
+    margin: 0px 20px;
+    font-weight: 600;
+    font-size: 1vw;
+    font-family: var(--font2);
+}
+.nav-items h5:nth-child(1){
+    color: var(--color4);
+}
+
+.intro-section{
+    padding: 0px 200px 100px 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.left-section{
+    width: 65%;
+    margin-top: 80px;
+}
+.left-section h3{
+    font-size: 2vw;
+    font-family: var(--font2);
+    font-weight: lighter;
+}
+.left-section h3 img{
+    font-size: 1vw;
+    height: 2vw;
+}
+.left-section h1{
+    font-size: 4vw;
+    font-weight: 500;
+    margin: 30px 0px;
+}
+
+.sub-headlines{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:80px 0px 80px 100px;
+}
+.sub-headlines img{
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color4);
+    margin-right: 20px;
+    padding: 5px;
+    box-sizing: content-box;
+}
+.sub-headline{
+    font-size: 1.2vw;
+    font-family: var(--font2);
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    margin: 5px 0px;
+}
+.left-section p{
+    color: var(--color3);
+    font-family: var(--font2);
+    width: 70%;
+}
+.left-section .action-btns{
+    margin-top: 100px;
+}
+.left-section .action-btns .action-btn:nth-child(1){
+    margin-right: 40px;
+}
+.action-btn{
+    width: 9vw;
+    height: 3vw;
+    color: var(--color1);
+    font-family: var(--font2);
+    font-size:1vw;
+    outline: none;
+    border: none;
+    background-color: var(--color4);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.right-section{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headphone-div{
+    position: relative;
+    width: 100%;
+}
+img[src="./images/discount.svg"]{
+    position: absolute;
+    left: -50px;
+    top:400px;
+}
+.discount-content{
+    position: absolute;
+    left: -8px;
+    top:460px;
+    z-index: 1;
+    text-align: center;
+    color: var(--color1);
+}
+.discount-content h4{
+    font-size: 15px;
+}
+.discount-content h1{
+    font-size: 50px;
+    font-weight: 500;
+}
+img[src="./images/headphones.jpg"]{
+    position: relative;
+    top: 0;
+    z-index: -1;
+}
+.dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dots .dot{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0px 20px;
+}
+.yellow-dot{
+    background:rgb(236, 236, 5);
+}
+.tomato-dot{
+    background: var(--color4);
+}
+.black-dot{
+    background: var(--color2);
+}
+.right-section .action-btn{
+    margin-top:50px;
+}
