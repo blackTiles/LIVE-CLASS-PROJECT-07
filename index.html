@@ -15,14 +15,18 @@
   </head>
   <body>
     <nav>
-      <img src="./images/logo.svg" alt="logo" />
+      <img src="./images/logo.svg" alt="logo" class="nav-logo" />
       <div class="nav-items">
+        <li class="close-btn" onclick="closeNav()" style="font-size: 35px;">&times;</li>
         <h5 class="nav-item active-item">Home</h5>
         <h5 class="nav-item">Product</h5>
         <h5 class="nav-item">Price</h5>
         <h5 class="nav-item">About</h5>
       </div>
-      <img src="./images/actions.svg" alt="actions" />
+      <img src="./images/actions.png" alt="actions" class="action-icon" />
+      <div class="hamburger">
+        <span onclick="openNav()" style="font-size: 35px;">&#9776;</span>
+      </div>
     </nav>
     <div class="intro-section">
       <div class="left-section">
@@ -60,7 +64,7 @@
             <h4>Discount</h4>
             <h1>50%</h1>
           </div>
-          <img src="./images/headphones.jpg" alt="headphone" />
+          <img src="./images/headphones.jpg" alt="headphone" class="headphone-img" />
         </div>
         <div class="dots">
           <div class="dot yellow-dot"></div>
@@ -70,5 +74,14 @@
         <button class="action-btn">Add to chart</button>
       </div>
     </div>
+    <script>
+      function openNav() {
+        document.querySelector(".nav-items").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.querySelector(".nav-items").style.width = "0";
+      }
+  </script>
   </body>
 </html>

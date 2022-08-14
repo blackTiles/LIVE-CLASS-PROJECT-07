@@ -19,24 +19,46 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 20px 60px 120px;
+    padding: 40px 120px 60px 120px;
+}
+.nav-logo{
+    order: 1;
 }
 .nav-items{
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--color3);
-    
+    justify-content: center;
+    /* flex-grow: 1; */
+    gap: 30px;
+    order: 2;
+}
+.action-icon{
+    order: 3;
 }
 .nav-items h5{
-    margin: 0px 20px;
     font-weight: 600;
-    font-size: 1vw;
+    font-size: 18px;
     font-family: var(--font2);
 }
-.nav-items h5:nth-child(1){
+.nav-items h5:nth-child(2){
     color: var(--color4);
 }
+/* nav mobile  */
+.hamburger{
+    color: var(--color2);
+    display: none;
+  }
+  .hamburger span{
+    cursor:pointer;
+    font-size: 35px;
+  }
+  .close-btn{
+    display: none;
+    cursor:pointer;
+  }
+
 
 .intro-section{
     padding: 0px 200px 100px 120px;
@@ -89,6 +111,7 @@ nav{
     color: var(--color3);
     font-family: var(--font2);
     width: 70%;
+    font-size: 20px;
 }
 .left-section .action-btns{
     margin-top: 100px;
@@ -97,11 +120,11 @@ nav{
     margin-right: 40px;
 }
 .action-btn{
-    width: 9vw;
-    height: 3vw;
+    width: 170px;
+    height: 60px;
     color: var(--color1);
     font-family: var(--font2);
-    font-size:1vw;
+    font-size:20px;
     outline: none;
     border: none;
     background-color: var(--color4);
@@ -165,4 +188,177 @@ img[src="./images/headphones.jpg"]{
 }
 .right-section .action-btn{
     margin-top:50px;
+}
+
+
+@media (max-width:1400px) {
+    .intro-section{
+        padding: 0px 10px 100px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left-section{
+        width: fit-content;
+    }
+    .right-section{
+        width: fit-content;
+    }
+}
+@media (max-width:1100px){
+    nav{
+        padding: 20px 10px 60px 10px;
+    }
+    .nav-logo{
+        order: 1;
+    }
+    .nav-items{
+        order: 3;
+    }
+    .hamburger{
+        display: inline-block;
+        order: 4;
+    }
+    nav .nav-items{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.87);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+    }
+    .close-btn{
+        display: inline-block;
+        position: absolute;
+        right: 25px;
+        top: 60px;
+        /* font-size: 35px; */
+    }
+
+
+    .action-icon{
+        order: 2;
+    }
+    .intro-section{
+        padding: 0px 10px 100px 10px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .left-section{
+        width: fit-content;
+        margin: 80px auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub-headline{
+        font-size: 20px;
+        font-family: var(--font2);
+        display: flex;
+        align-items: center;
+        font-weight: 100;
+        margin: 5px 0px;
+    }
+    .left-section p{
+        color: var(--color3);
+        font-family: var(--font2);
+        width: 90%;
+        font-size: 20px;
+    }
+    .left-section .action-btns{
+        margin-top: 20px;
+    }
+    .left-section h3{
+        font-size: 22px;
+        font-family: var(--font2);
+        font-weight: lighter;
+    }
+    .left-section h3 img{
+        font-size: 25px;
+        height: 25px;
+    }
+    .left-section h1{
+        font-size: 35px;
+        font-weight: 500;
+        margin: 30px 0px;
+    }
+    
+    .sub-headlines{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin:20px 0px 20px 0px;
+    }
+    .left-section .action-btns .action-btn:nth-child(1){
+        margin-right: 15px;
+        width: 140px;
+        font-size: 16px;
+    }
+    .left-section .action-btns .action-btn:nth-child(2){
+        margin-right: 20px;
+        width: 140px;
+        font-size: 16px;
+    }
+} 
+
+@media (max-width: 750px){
+    .headphone-img{
+        width: 100%;
+    }
+    img[src="./images/discount.svg"]{
+        position: absolute;
+        left: 0px;
+        top:65%;
+        width: 120px;
+    }
+    .discount-content{
+        position: absolute;
+        left: 30px;
+        top:71%;
+        z-index: 1;
+        text-align: center;
+        color: var(--color1);
+    }
+    .discount-content h4{
+        font-size: 14px;
+    }
+    .discount-content h1{
+        font-size: 30px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:500px){
+    .discount-content{
+        position: absolute;
+        left: 30px;
+        top:73%;
+        z-index: 1;
+        text-align: center;
+        color: var(--color1);
+    }
+    .action-icon{
+        display: none;
+    }
+}
+@media (max-width:400px){
+    .discount-content{
+        position: absolute;
+        left: 30px;
+        top:75%;
+        z-index: 1;
+        text-align: center;
+        color: var(--color1);
+    }
 }
